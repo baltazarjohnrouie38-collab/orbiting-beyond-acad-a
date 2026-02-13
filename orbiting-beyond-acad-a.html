@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orbiting Beyond Acad A</title>
+
+<style>
+
+/* ====== BODY & SPACE BACKGROUND ====== */
+body{
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    color:white;
+    background:black;
+    overflow-x:hidden;
+}
+
+/* Star Background */
+.stars{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background: url("https://www.transparenttextures.com/patterns/stardust.png");
+    z-index:-3;
+}
+
+/* ====== NAVIGATION ====== */
+header{
+    position:fixed;
+    width:100%;
+    background:rgba(0,0,0,0.8);
+    padding:15px;
+    text-align:center;
+    z-index:10;
+}
+
+nav a{
+    color:#ffd700;
+    margin:20px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:white;
+}
+
+/* ====== SECTION ====== */
+section{
+    padding:120px 50px;
+    min-height:100vh;
+}
+
+/* ====== PLANETS ANIMATION ====== */
+.orbit{
+    position:relative;
+    width:300px;
+    height:300px;
+    margin:40px auto;
+    border:1px dashed rgba(255,255,255,0.2);
+    border-radius:50%;
+    animation:spin 20s linear infinite;
+}
+
+.planet{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    position:absolute;
+    top:-20px;
+    left:130px;
+}
+
+.earth{ background:blue; }
+.mars{ background:red; }
+.jupiter{ background:orange; }
+
+@keyframes spin{
+    from{ transform:rotate(0deg); }
+    to{ transform:rotate(360deg); }
+}
+
+/* ====== CARDS ====== */
+.card{
+    background:rgba(255,255,255,0.1);
+    padding:20px;
+    border-radius:15px;
+    margin:20px 0;
+    backdrop-filter:blur(5px);
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s;
+}
+
+.card.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* ====== CAREERS GRID ====== */
+.career-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.career-grid img{
+    width:100%;
+    border-radius:10px;
+}
+
+/* ====== FOOTER ====== */
+footer{
+    background:black;
+    padding:20px;
+    text-align:center;
+    border-top:1px solid #ffd700;
+}
+
+h1,h2{
+    text-align:center;
+    color:#ffd700;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<header>
+    <h1>🌞 Orbiting Beyond Acad A</h1>
+    <nav>
+        <a href="#home">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#members">MEMBERS</a>
+    </nav>
+</header>
+
+<!-- HOME -->
+<section id="home">
+    <h2>Welcome to Academic A - STEM</h2>
+
+    <!-- Moving Planets -->
+    <div class="orbit">
+        <div class="planet earth"></div>
+    </div>
+
+    <div class="card">
+        <h3>Definition</h3>
+        <p>
+        Academic A - STEM focuses on Science, Technology, Engineering, and Mathematics.
+        Our strand strengthens mathematical skills and applies them to real-world challenges.
+        Students learn analytical thinking, logical reasoning, and modern technology tools.
+        This strand prepares learners for careers like engineering, architecture, computer science,
+        and teaching. It develops teamwork, research skills, and innovation.
+        Ultimately, STEM students become problem-solvers ready for the future.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Future Careers</h3>
+        <div class="career-grid">
+            <div>
+                <img src="https://source.unsplash.com/300x200/?civil-engineering">
+                <p>Civil Engineer</p>
+            </div>
+            <div>
+                <img src="https://source.unsplash.com/300x200/?architecture">
+                <p>Architect</p>
+            </div>
+            <div>
+                <img src="https://source.unsplash.com/300x200/?marine-engineer">
+                <p>Marine Engineer</p>
+            </div>
+            <div>
+                <img src="https://source.unsplash.com/300x200/?web-developer">
+                <p>Web Developer</p>
+            </div>
+            <div>
+                <img src="https://source.unsplash.com/300x200/?biologist">
+                <p>Biologist</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>About Our Strand</h2>
+
+    <div class="card">
+        <h3>Role in Society</h3>
+        <p>
+        STEM plays a vital role in developing innovators, engineers, scientists,
+        and educators who contribute to technology, infrastructure, and scientific
+        advancement in society.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Why We Chose This Strand</h3>
+        <p>Rouie – To challenge myself mentally.</p>
+        <p>Jerome – To become a Marine Engineer.</p>
+        <p>Andrei C. – To become a Math Teacher.</p>
+        <p>Kurt – Engineering has always been my dream.</p>
+        <p>Andrei G. – I love math and problem solving.</p>
+    </div>
+
+    <div class="card">
+        <h3>Tips</h3>
+        <p>Practice daily. Take notes. Manage time. Stay consistent.</p>
+    </div>
+</section>
+
+<!-- MEMBERS -->
+<section id="members">
+    <h2>Meet the Crew 🚀</h2>
+
+    <div class="card">
+        <h3>Rouie</h3>
+        <p>"Don’t panic, stay organic."</p>
+    </div>
+
+    <div class="card">
+        <h3>Jerome</h3>
+        <p>"Aim for progress, not perfection."</p>
+    </div>
+
+    <div class="card">
+        <h3>Andrei C.</h3>
+        <p>"Solve life step by step."</p>
+    </div>
+
+    <div class="card">
+        <h3>Kurt</h3>
+        <p>"Stay consistent."</p>
+    </div>
+
+    <div class="card">
+        <h3>Andrei G.</h3>
+        <p>"Never give up."</p>
+    </div>
+</section>
+
+<footer>
+    <h3>About Our Website</h3>
+    <p>
+    A solar-system inspired STEM blogsite showcasing our strand,
+    dreams, and future careers.
+    </p>
+
+    <h4>Contact</h4>
+    <p>joyjeromejr.bonifacio@email.lcup.edu.ph</p>
+    <p>andreiryan.chico@email.lcup.edu.ph</p>
+</footer>
+
+<!-- JAVASCRIPT EFFECTS -->
+<script>
+
+/* Scroll Reveal Animation */
+const cards = document.querySelectorAll(".card");
+
+window.addEventListener("scroll", () => {
+    cards.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top;
+        if(cardTop < window.innerHeight - 100){
+            card.classList.add("show");
+        }
+    });
+});
+
+/* Smooth Scroll */
+document.querySelectorAll("nav a").forEach(anchor=>{
+    anchor.addEventListener("click", function(e){
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href"))
+        .scrollIntoView({behavior:"smooth"});
+    });
+});
+
+</script>
+
+</body>
+</html>
